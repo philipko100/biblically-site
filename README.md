@@ -33,6 +33,10 @@ because they are load-bearing both legally and for the App Store privacy label:
   `supabase/functions/explain-verse/index.ts`.
 - **Account deletion is immediate and permanent**, with no retention window.
   Check `supabase/functions/delete-account/index.ts` and the cascade on the FKs.
+  A five-year retention clause was drafted and then removed: the function
+  hard-deletes and the foreign keys cascade, so there is nothing retained to
+  describe. Do not reintroduce a retention period unless the app starts
+  soft-deleting — the claim has to match the code.
 - **Nothing is sold, licensed, or shared for anyone else's purposes.**
 
 Religious belief — the tradition setting, the intake answers, and journal
