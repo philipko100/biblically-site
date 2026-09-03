@@ -21,11 +21,11 @@
   <p class="meta">Last updated 3 September 2026</p>
 
   <p class="lede">This policy explains what the Biblically app stores, the legal basis for
-  processing it, who it is shared with, and how to delete all of it. Two things are true of
-  Biblically that are not true of most apps, and they shape everything below: <strong>there are no
-  analytics, advertising, or tracking technologies in the app of any kind</strong>, and
-  <strong>we never sell, license, or share your personal information for anyone else's
-  purposes.</strong></p>
+  processing it, who it is shared with, and how to delete all of it. Two things shape everything
+  below: <strong>we never sell, license, or share your personal information for anyone else's
+  purposes</strong>, and <strong>there is no advertising and no cross-app tracking</strong>. The
+  App does measure how it is used, so that it can be improved — you can turn that off, and
+  <a href="#analytics">Usage analytics</a> says exactly what it involves.</p>
 
   <h2>About this policy</h2>
   <p>It covers the Biblically mobile app and the biblically.app website (together, the "App").
@@ -99,15 +99,58 @@
   consent</strong>, given when you choose a tradition and answer the opening questions, and we
   process it <strong>solely to operate the App for you</strong> — showing the right canon, saving
   your journal, and displaying your own history back to you.</p>
-  <p>We do not use it for advertising, profiling, or research. We do not sell it, license it, or
-  share it with data brokers or AI developers. You can withdraw your consent at any time by deleting
-  your account, which erases the underlying data outright.</p>
+  <p>Your consent also covers the limited use of this information in <a href="#analytics">usage
+  analytics</a> — your tradition setting, and what your reading reveals about your practice. That
+  is a separate purpose from running the App, which is why it has its own off switch under
+  Me &rarr; Privacy; turning it off stops that use immediately and costs you no functionality.</p>
+  <p>We do not use it for advertising or for profiling you as an individual. We do not sell it,
+  license it, or share it with data brokers or AI developers. You can withdraw your consent for the
+  App itself at any time by deleting your account, which erases the underlying data outright.</p>
 
   <h2>What we do not collect</h2>
-  <p>The App contains <strong>no analytics or telemetry SDKs of any kind</strong>. We do not collect
-  your location, contacts, photos, health data, calendar, or advertising identifier. We show no ads
-  and build no advertising profiles. The website sets <strong>no cookies</strong> and has no
-  tracking pixels, which is why you were not asked to consent to any.</p>
+  <p>We do not collect your location, contacts, photos, health data, calendar, or advertising
+  identifier. We show no ads, build no advertising profiles, and do not track you across other apps
+  or websites. The website sets <strong>no cookies</strong> and has no tracking pixels, which is why
+  you were not asked to consent to any. The App does collect usage analytics, described next.</p>
+
+  <h2 id="analytics">Usage analytics</h2>
+  <p>To see which parts of Biblically work and which do not, the App records what people do in it,
+  using <strong>PostHog</strong> as our analytics provider. This is on by default. <strong>You can
+  turn it off at any time in the App under Me &rarr; Privacy &rarr; "Share anonymous usage
+  data"</strong>, and nothing further is sent from that moment.</p>
+
+  <h3>What analytics records</h3>
+  <ul>
+    <li>Which screens you open and in what order, including which book and chapter you are reading
+    and which passages you ask to have explained</li>
+    <li>That you completed the opening questions, signed in, saved a check-in, saved a journal
+    entry, chose a tradition, turned Daily Focus on or off, saw the paywall, or deleted your
+    account</li>
+    <li>Your daily check-in ratings, and the <strong>word count</strong> of a journal entry</li>
+    <li>Your tradition setting — Catholic, Orthodox, or neither</li>
+    <li>Standard app events (installed, updated, opened, backgrounded), your device type, operating
+    system version and language, and which sign-in provider you used</li>
+    <li>A random account identifier, so these events can be grouped as one person's use over time</li>
+  </ul>
+
+  <h3>What analytics never records</h3>
+  <div class="card">
+    <p><strong>The words you write are never sent.</strong> Not your prayer journal, not your notes,
+    not your highlights. A journal entry is counted, not read — analytics sees "412 words", never
+    the 412 words.</p>
+    <p><strong>Your email address and name are never sent to analytics</strong>, and neither are
+    your answers to the opening questions. The identifier used is the random one your account
+    already has, not anything that names you.</p>
+  </div>
+
+  <h3>The part that needs your consent</h3>
+  <p>Your tradition reveals a religious belief, which is special category data (see below). Two of
+  the items above touch it: the tradition setting itself, and the fact that reading a particular
+  passage says something about your practice. We include them because knowing which canon people
+  choose, and which parts of Scripture go unread, is how the App gets better at its actual job.</p>
+  <p>We rely on your <strong>consent</strong> for this, and consent you cannot withdraw would not be
+  worth much — which is what the switch in the App is for. Turning analytics off stops all of it,
+  and does not limit any feature.</p>
 
   <h2>Daily Focus and Screen Time</h2>
   <div class="card">
@@ -131,6 +174,9 @@
           <td><strong>Explicit consent</strong> (GDPR Art. 9(2)(a))</td></tr>
       <tr><td>Generating an explanation when you ask for one</td>
           <td>Performance of a contract</td></tr>
+      <tr><td>Measuring how the App is used so that it can be improved</td>
+          <td>Consent — withdrawn by the switch under Me &rarr; Privacy. Where the information
+          reveals religious belief, <strong>explicit consent</strong> (GDPR Art. 9(2)(a))</td></tr>
       <tr><td>Keeping the service secure, preventing abuse, and diagnosing faults</td>
           <td>Legitimate interests — running a service that works and is not abused</td></tr>
       <tr><td>Replying to you when you contact us</td>
@@ -141,7 +187,7 @@
   </table>
   </div>
   <p>We do not process your information for marketing. The App sends no promotional email and no
-  push notifications.</p>
+  push notifications, and analytics is used to improve the App, never to target you with anything.</p>
 
   <h2>Who we share it with</h2>
   <p>Only the service providers needed to run the App. Each acts on our instructions or as an
@@ -159,6 +205,11 @@
       <tr><td><strong>bolls.life</strong></td>
           <td>Your IP address and which chapter is requested</td>
           <td>Serves the Bible text. No account information is sent.</td></tr>
+      <tr><td><strong>PostHog</strong></td>
+          <td>The usage events listed under <a href="#analytics">Usage analytics</a>, tied to a
+          random account identifier</td>
+          <td>Our analytics provider, so we can see how the App is used and improve it. Hosted in
+          the United States. Never receives your name, email, or anything you have written.</td></tr>
       <tr><td><strong>OpenAI</strong></td>
           <td>Only the verse text and its reference</td>
           <td>Generates the optional passage explanation. <strong>Nothing identifying you is
@@ -185,8 +236,9 @@
   handled personally and we will respond within one month.</p>
 
   <h2>Where your information is held, and international transfers</h2>
-  <p>We are based in British Columbia, and <strong>our hosting is in the United States</strong> — so wherever
-  you use the App from, your information is stored and processed in the US by our hosting provider.</p>
+  <p>We are based in British Columbia, and <strong>our hosting and our analytics provider are both
+  in the United States</strong> — so wherever you use the App from, your information is stored and
+  processed in the US by Supabase and, unless you have turned analytics off, by PostHog.</p>
   <p><strong>While it is held there it is subject to United States law</strong>, and US courts, law
   enforcement and national security authorities may be entitled to obtain access to it under that
   law. We are telling you this plainly because Canadian privacy law expects an organisation

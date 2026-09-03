@@ -25,7 +25,13 @@ The policy states what the app actually does, and several of its claims are
 unusually strong. Verify each one still holds in the app repo before editing,
 because they are load-bearing both legally and for the App Store privacy label:
 
-- **No analytics or tracking SDKs of any kind.** Check `package.json`.
+- **The app DOES have analytics** (PostHog, `posthog-react-native`). The policy
+  used to claim it had none; that became false the moment the SDK landed, and
+  the "Usage analytics" section now describes it. If the event set changes,
+  change that section in the same pass — the events are listed individually.
+- **Analytics can be turned off** in the app under Me → Privacy. The policy
+  promises this; `setAnalyticsEnabled` in `src/lib/posthog.ts` delivers it.
+  Do not remove one without the other.
 - **No cookies on this site.** There is no consent banner because none is needed.
 - **The Daily Focus selection never leaves the device** — Apple's Screen Time
   framework returns an opaque reference the app cannot resolve.
