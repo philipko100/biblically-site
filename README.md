@@ -8,8 +8,9 @@ root, with `CNAME` pointing the apex domain `biblically.app` at it.
 
 ```
 index.html          landing page
-privacy/index.html  → https://biblically.app/privacy
-support/index.html  → https://biblically.app/support
+privacy/index.html  → https://www.biblically.app/privacy
+terms/index.html    → https://www.biblically.app/terms
+support/index.html  → https://www.biblically.app/support
 style.css           shared styles, light and dark
 CNAME               the custom domain
 .nojekyll           skip Jekyll processing; these are plain files
@@ -48,3 +49,22 @@ The App Store privacy questionnaire must agree with this page. If one changes,
 change the other in the same pass.
 
 Update the "Last updated" date whenever the substance changes.
+
+## Editing the terms
+
+Two clauses are load-bearing and were written against what the app actually
+does. Do not loosen either without changing the app to match:
+
+- **Your content stays yours.** The licence granted is only what is needed to
+  store, sync and display a user's own content back to them; it is
+  non-exclusive and ends on deletion. Nothing is sold, licensed or shared, and
+  nothing trains an AI model. This must agree with the privacy policy, which
+  says the same — a terms/policy contradiction is itself a legal problem.
+- **The Apple block is mandatory.** A custom EULA distributed through the App
+  Store has to state that the agreement is with the developer and not Apple,
+  that Apple has no maintenance or support obligation, that Apple is not
+  responsible for claims, and that Apple is a third-party beneficiary entitled
+  to enforce. Removing it risks rejection.
+
+The age statement, the subscription terms and the deletion description must
+stay consistent with the privacy policy and with App Store Connect.
