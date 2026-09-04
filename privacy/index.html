@@ -99,10 +99,9 @@
   consent</strong>, given when you choose a tradition and answer the opening questions, and we
   process it <strong>solely to operate the App for you</strong> — showing the right canon, saving
   your journal, and displaying your own history back to you.</p>
-  <p>Your consent also covers the limited use of this information in <a href="#analytics">usage
-  analytics</a> — your tradition setting, and what your reading reveals about your practice. That
-  is a separate purpose from running the App, which is why it has its own off switch under
-  Me &rarr; Privacy; turning it off stops that use immediately and costs you no functionality.</p>
+  <p>This information is used <strong>only to run the App</strong>. Your tradition setting, your
+  answers to the opening questions, and everything you write are <strong>not sent to usage
+  analytics</strong>.
   <p>We do not use it for advertising or for profiling you as an individual. We do not sell it,
   license it, or share it with data brokers or AI developers. You can withdraw your consent for the
   App itself at any time by deleting your account, which erases the underlying data outright.</p>
@@ -115,9 +114,9 @@
 
   <h2 id="analytics">Usage analytics</h2>
   <p>To see which parts of Biblically work and which do not, the App records what people do in it,
-  using <strong>PostHog</strong> as our analytics provider. This is on by default. <strong>You can
-  turn it off at any time in the App under Me &rarr; Privacy &rarr; "Share anonymous usage
-  data"</strong>, and nothing further is sent from that moment.</p>
+  using <strong>PostHog</strong> as our analytics provider. It runs whenever you use the App, and
+  <strong>there is no in-app switch to turn it off</strong>. It records how the App is used, never
+  what you write. Deleting your account stops any further events being recorded.</p>
 
   <h3>What analytics records</h3>
   <ul>
@@ -127,7 +126,6 @@
     entry, chose a tradition, turned Daily Focus on or off, saw the paywall, or deleted your
     account</li>
     <li>Your daily check-in ratings, and the <strong>word count</strong> of a journal entry</li>
-    <li>Your tradition setting — Catholic, Orthodox, or neither</li>
     <li>Standard app events (installed, updated, opened, backgrounded), your device type, operating
     system version and language, and which sign-in provider you used</li>
     <li>A random account identifier, so these events can be grouped as one person's use over time</li>
@@ -143,14 +141,14 @@
     already has, not anything that names you.</p>
   </div>
 
-  <h3>The part that needs your consent</h3>
-  <p>Your tradition reveals a religious belief, which is special category data (see below). Two of
-  the items above touch it: the tradition setting itself, and the fact that reading a particular
-  passage says something about your practice. We include them because knowing which canon people
-  choose, and which parts of Scripture go unread, is how the App gets better at its actual job.</p>
-  <p>We rely on your <strong>consent</strong> for this, and consent you cannot withdraw would not be
-  worth much — which is what the switch in the App is for. Turning analytics off stops all of it,
-  and does not limit any feature.</p>
+  <h3>What analytics does not tell us about your beliefs</h3>
+  <p>Analytics <strong>does not record your tradition setting</strong>, and it never receives your
+  answers to the opening questions, your prayer journal, your notes or your highlights. It does
+  record which book and chapter you open, as part of ordinary screen usage, and we use that to see
+  which parts of Scripture are read and which features work.</p>
+  <p>We do not use analytics to infer or profile your religious beliefs, and never for advertising.
+  The information that genuinely reveals belief &mdash; your tradition, your intake answers and the
+  words you write &mdash; stays in your account and is erased when you delete it.</p>
 
   <h2>Daily Focus and Screen Time</h2>
   <div class="card">
@@ -175,8 +173,9 @@
       <tr><td>Generating an explanation when you ask for one</td>
           <td>Performance of a contract</td></tr>
       <tr><td>Measuring how the App is used so that it can be improved</td>
-          <td>Consent — withdrawn by the switch under Me &rarr; Privacy. Where the information
-          reveals religious belief, <strong>explicit consent</strong> (GDPR Art. 9(2)(a))</td></tr>
+          <td>Legitimate interests &mdash; understanding how the App is used so it can be made
+          better. Analytics does not receive your tradition setting, your intake answers, or
+          anything you have written.</td></tr>
       <tr><td>Keeping the service secure, preventing abuse, and diagnosing faults</td>
           <td>Legitimate interests — running a service that works and is not abused</td></tr>
       <tr><td>Replying to you when you contact us</td>
@@ -238,7 +237,7 @@
   <h2>Where your information is held, and international transfers</h2>
   <p>We are based in British Columbia, and <strong>our hosting and our analytics provider are both
   in the United States</strong> — so wherever you use the App from, your information is stored and
-  processed in the US by Supabase and, unless you have turned analytics off, by PostHog.</p>
+  processed in the US by Supabase and by PostHog.</p>
   <p><strong>While it is held there it is subject to United States law</strong>, and US courts, law
   enforcement and national security authorities may be entitled to obtain access to it under that
   law. We are telling you this plainly because Canadian privacy law expects an organisation
