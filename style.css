@@ -84,6 +84,21 @@ a:focus-visible { outline: 2px solid var(--accent-bright); outline-offset: 3px; 
 }
 .card p:last-child { margin-bottom: 0; }
 
+/* The App Store badge.
+
+   This is Apple's trademarked artwork under their Marketing Resources terms:
+   it may be scaled, but never recoloured, restyled, cropped, or rebuilt as a
+   text button. So there is no border, background or hover treatment here —
+   only size. Apple asks for clear space of at least one tenth the badge height
+   on every side, which the margins below exceed.
+
+   line-height: 0 kills the inline descender gap under the image; without it
+   the link box is taller than the badge and the focus ring sits low. */
+.cta { margin: 1.75rem 0 2.5rem; }
+.appstore { display: inline-block; line-height: 0; }
+.appstore img { height: 3.25rem; width: auto; }
+.appstore:focus-visible { outline: 2px solid var(--accent-bright); outline-offset: 4px; border-radius: 8px; }
+
 .table { width: 100%; border-collapse: collapse; margin: 1rem 0 1.5rem; font-size: .95rem; }
 .table th, .table td { text-align: left; padding: .6rem .75rem; border-bottom: 1px solid var(--border); vertical-align: top; }
 .table th { color: var(--text-secondary); font-weight: 600; font-size: .85rem; text-transform: uppercase; letter-spacing: .04em; }
