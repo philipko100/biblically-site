@@ -94,10 +94,38 @@ a:focus-visible { outline: 2px solid var(--accent-bright); outline-offset: 3px; 
 
    line-height: 0 kills the inline descender gap under the image; without it
    the link box is taller than the badge and the focus ring sits low. */
-.cta { margin: 1.75rem 0 2.5rem; }
+.cta { margin: 2.25rem 0 3rem; }
 .appstore { display: inline-block; line-height: 0; }
-.appstore img { height: 3.25rem; width: auto; }
+
+/* Sized by WIDTH, not height, so the badge can never overflow a narrow phone:
+   at 2x it is 312px wide, more than a 320px viewport has to spare once the
+   gutters are out. height:auto keeps Apple's aspect ratio intact.
+
+   The cap is viewport-based, NOT a percentage, and that is load-bearing. The
+   link is an inline-block, so its width shrinks to fit its contents — which
+   means a `%` on the image resolves against a parent sized BY that image.
+   Browsers break the circle by falling back to the intrinsic 120px, and the
+   badge silently ignores the rule. calc(100vw - 3rem) subtracts .wrap's
+   1.5rem gutters and has no such dependency. */
+.appstore img { width: min(19.5rem, calc(100vw - 3rem)); height: auto; }
 .appstore:focus-visible { outline: 2px solid var(--accent-bright); outline-offset: 4px; border-radius: 8px; }
+
+/* The homepage is centre-aligned end to end.
+
+   Scoped to .home on purpose: this stylesheet is shared with Privacy, Terms
+   and Support, where centring would wreck long legal prose and the tables
+   outright. The masthead is also left out — it is site chrome shared by every
+   page, and centring it only here would make the nav jump on navigation. */
+.home h1,
+.home h2,
+.home p,
+.home .card,
+.home footer { text-align: center; }
+
+/* Centred list markers hang at ragged positions down the left, so the bullets
+   come off and each item becomes its own centred block. */
+.home ul { list-style: none; padding-left: 0; text-align: center; }
+.home li { margin-bottom: .9rem; }
 
 .table { width: 100%; border-collapse: collapse; margin: 1rem 0 1.5rem; font-size: .95rem; }
 .table th, .table td { text-align: left; padding: .6rem .75rem; border-bottom: 1px solid var(--border); vertical-align: top; }
