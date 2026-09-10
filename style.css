@@ -98,8 +98,8 @@ a:focus-visible { outline: 2px solid var(--accent-bright); outline-offset: 3px; 
 .appstore { display: inline-block; line-height: 0; }
 
 /* Sized by WIDTH, not height, so the badge can never overflow a narrow phone:
-   at 2x it is 312px wide, more than a 320px viewport has to spare once the
-   gutters are out. height:auto keeps Apple's aspect ratio intact.
+   at 156px wide it comfortably clears even a 320px viewport once the gutters
+   are out. height:auto keeps Apple's aspect ratio intact.
 
    The cap is viewport-based, NOT a percentage, and that is load-bearing. The
    link is an inline-block, so its width shrinks to fit its contents — which
@@ -107,7 +107,7 @@ a:focus-visible { outline: 2px solid var(--accent-bright); outline-offset: 3px; 
    Browsers break the circle by falling back to the intrinsic 120px, and the
    badge silently ignores the rule. calc(100vw - 3rem) subtracts .wrap's
    1.5rem gutters and has no such dependency. */
-.appstore img { width: min(19.5rem, calc(100vw - 3rem)); height: auto; }
+.appstore img { width: min(9.75rem, calc(100vw - 3rem)); height: auto; }
 .appstore:focus-visible { outline: 2px solid var(--accent-bright); outline-offset: 4px; border-radius: 8px; }
 
 /* The homepage is centre-aligned end to end.
